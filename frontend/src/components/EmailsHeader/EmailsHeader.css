@@ -1,0 +1,20 @@
+.emails-header {
+  float: top;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 48px;
+}
+
+.emails-header > * {
+  display: flex;
+  align-items: center;
+}
+
+.emails-header__select {
+  border-radius: 0 !important;
+}

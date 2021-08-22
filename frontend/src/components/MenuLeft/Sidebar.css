@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Google+Sans&display=swap');
+
+.sidebar {
+  float: left;
+  min-width: 240px;
+  max-width: 240px;
+}
+
+.sidebar__compose {
+  background-color: white;
+  font: 14px "Google Sans" !important;
+  letter-spacing: .25px !important;
+  font-weight: 600 !important;
+  color: #5f6368 !important;
+  text-align: center !important;
+  padding: 0 24px 0 12px !important;
+  text-transform: none !important;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+  border-radius: 24px !important;
+  min-width: 56px !important;
+  height: 48px !important;
+  margin: 16px 0 !important;
+  margin-left: 8px !important;
+}
+
+.sidebar__compose img {
+  border-radius: 100%;
+  height: 32px !important;
+  width: 32px !important;
+  align-self: center !important;
+}

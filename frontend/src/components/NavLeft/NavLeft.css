@@ -1,0 +1,13 @@
+.nav__left {
+  display: flex;
+  align-items: center;
+}
+
+.nav__left > button {
+  padding: 8px !important;
+}
+
+.nav__logo {
+  display: flex;
+  margin-left: 8px;
+}

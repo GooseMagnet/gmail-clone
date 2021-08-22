@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Google+Sans&display=swap');
+
+.nav__middle {
+  flex: 1 1 50%;
+}
+
+.nav__search {
+  display: flex;
+  align-items: center;
+  color: #5f6368;
+  background: #f1f3f4;
+  border-radius: 8px;
+  padding-right: 8px;
+  padding-left: 6px;
+  margin-left: 2px;
+  max-width: 710px;
+  min-width: 240px;
+}
+
+.nav__search__input {
+  height: auto;
+  outline: none;
+  border: none;
+  background: inherit;
+  width: 100%;
+  font: 16px "Google Sans";
+  justify-self: center;
+  font-weight: 400;
+  padding: 2px 0 0 4px;
+}
