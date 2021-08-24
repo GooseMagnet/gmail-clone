@@ -1,13 +1,13 @@
 import React from "react";
 import EmailsHeader from "../EmailsHeader/EmailsHeader";
-import EmailsTable from "../EmailsTable/EmailsTable";
+import EmailList from "../EmailList/EmailList";
 import "./EmailSection.css";
 
 const EmailSection = (props) => {
   return (
     <div className="emails-section">
-      <EmailsHeader />
-      <EmailsTable />
+      <EmailsHeader/>
+      <EmailList/>
     </div>
   );
 };

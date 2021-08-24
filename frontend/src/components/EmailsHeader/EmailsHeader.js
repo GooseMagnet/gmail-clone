@@ -1,6 +1,6 @@
 import React from "react";
 import "./EmailsHeader.css";
-import { Checkbox, IconButton } from "@material-ui/core";
+import {Checkbox, IconButton} from "@material-ui/core";
 import {
   Keyboard,
   KeyboardArrowLeft,
@@ -8,37 +8,32 @@ import {
   MoreVert,
   Refresh,
 } from "@material-ui/icons";
-import IconDropdown from "../IconDropdown/IconDropdown";
 
 const EmailsHeader = () => {
   return (
     <div className="emails-header">
+
       <div className="emails-header__left">
-        <div className="emails-header__select">
-          <IconDropdown>
-            <Checkbox />
-          </IconDropdown>
-        </div>
-        <IconButton>
-          <Refresh />
+        <Checkbox className="emails-header__left__checkbox"/>
+        <IconButton className="emails-header__left__refresh">
+          <Refresh/>
         </IconButton>
-        <IconButton>
-          <MoreVert />
+        <IconButton className="emails-header__left__more">
+          <MoreVert/>
         </IconButton>
       </div>
+
       <div className="emails-header__right">
-        <div className="emails-header__right__pages">
-          <span>1-50 of 1,166</span>
-          <IconButton>
-            <KeyboardArrowLeft />
-          </IconButton>
-          <IconButton>
-            <KeyboardArrowRight />
-          </IconButton>
-        </div>
-        <IconDropdown>
-          <Keyboard />
-        </IconDropdown>
+        <span>1 - 50 of 1,166</span>
+        <IconButton>
+          <KeyboardArrowLeft/>
+        </IconButton>
+        <IconButton>
+          <KeyboardArrowRight/>
+        </IconButton>
+        <IconButton>
+          <Keyboard/>
+        </IconButton>
       </div>
     </div>
   );

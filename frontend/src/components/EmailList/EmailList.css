@@ -1,0 +1,105 @@
+.email__list {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  background-color: rgba(242, 245, 245, 0.8);
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.email__list::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.email__list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.email__list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 16px;
+}
+
+.email__list::-webkit-scrollbar-track {
+  background: white;
+}
+
+.email__list::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.email__list::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+.email__list__row .MuiButtonBase-root {
+  width: 20px !important;
+  right: 0 !important;
+  height: 20px;
+  padding: 4px !important;
+}
+
+.email__list__row > button {
+  min-width: 24px;
+}
+
+.email__list__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+  padding: 10px 0;
+  cursor: pointer;
+  box-shadow: inset 0 -1px 0 0 rgb(100 121 143 / 12%)
+}
+
+.email__list__row__left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 20%;
+  padding-right: 32px;
+  gap: 2px;
+}
+
+.email__list__row__left__star {
+  margin-right: 4px !important;
+}
+
+.email__list__row__left__important {
+  color: #f4c430 !important;
+  width: 20px !important;
+}
+
+.email__list__row__from {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 8px;
+}
+
+.email__list__row__text {
+  flex-grow: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.email__list__row__subject {
+  font-weight: 500;
+  line-height: 20px !important;
+}
+
+.email__list__row__body {
+  color: #5f6368;
+  line-height: 20px !important;
+}
+
+.email__list__row__sent {
+  min-width: 100px;
+  justify-self: flex-end;
+  text-align: right;
+  padding: 14px;
+  font-size: 12px;
+}
