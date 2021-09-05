@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: gmail-event-consumers
+  data:
+    mongodb:
+      host: 172.26.0.2
+      port: 27017
+      database: gmail
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+kafka:
+  bootstrap-server: localhost:9092
+  group-id: gmail-clone-1

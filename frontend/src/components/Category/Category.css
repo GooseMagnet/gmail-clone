@@ -25,6 +25,13 @@
   margin-right: 18px;
 }
 
+.category__text {
+  display: flex;
+  align-items: center;
+  flex-grow: 2!important;
+  justify-content: space-between;
+}
+
 .category__title {
   font: 14px "Roboto";
   letter-spacing: .2px;
@@ -36,8 +43,14 @@
   font-weight: bold;
 }
 
-.category__selected > span {
+.category__selected span {
   font-weight: bold;
+}
+
+.category__child {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .category__selected.category__inbox {

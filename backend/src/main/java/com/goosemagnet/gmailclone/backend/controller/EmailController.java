@@ -35,8 +35,18 @@ public class EmailController {
         return emailService.createEmail(emailDto);
     }
 
+    @PostMapping("/bulk")
+    public void deleteEmailsBulk(@RequestBody List<String> emailIds) {
+        emailService.deleteEmailsBulk(emailIds);
+    }
+
     @DeleteMapping("/{id}")
     public void deleteEmail(@PathVariable("id") String emailId) {
         emailService.deleteEmail(emailId);
+    }
+
+    @PutMapping("/{id}")
+    public EmailDto updateEmail(@PathVariable("id") String emailId, @RequestBody @Valid EmailDto emailDto) {
+        return emailService.updateEmailById(emailId, emailDto);
     }
 }

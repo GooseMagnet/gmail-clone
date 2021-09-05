@@ -4,10 +4,10 @@ import com.github.javafaker.Faker;
 import com.goosemagnet.gmailclone.backend.model.EmailDto;
 import com.goosemagnet.gmailclone.backend.persistence.EmailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.Instant;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
@@ -22,6 +22,7 @@ public class DatabaseSeed {
 //    @Bean
     public void seedEmails() {
         Faker faker = new Faker();
+        ThreadLocalRandom threadLocalRandom = ThreadLocalRandom.current();
         IntStream.rangeClosed(1, 1000).forEach(ignored -> {
             String fromEmail = faker.internet().emailAddress();
             String toEmail = faker.internet().emailAddress();
@@ -35,6 +36,9 @@ public class DatabaseSeed {
             emailDto.setDateSent(dateSent);
             emailDto.setSubject(subject);
             emailDto.setBody(body);
+            emailDto.setRead(threadLocalRandom.nextBoolean());
+            emailDto.setStar(threadLocalRandom.nextBoolean());
+            emailDto.setImportant(threadLocalRandom.nextBoolean());
             emailRepository.save(emailDto);
         });
     }

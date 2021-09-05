@@ -13,12 +13,30 @@
   gap: 24px;
 }
 
+.emails-header__selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 4px !important;
+  gap: 28px !important;
+}
+
+.emails-header__selected__delete, .emails-header__selected__tasks, .emails-header__selected__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-shadow: inset -1px 0 0 rgb(100 121 143 / 12%);
+}
+
 .emails-header__left__refresh {
-  margin-left: 8px!important;
+  margin-left: 8px !important;
 }
 
 .emails-header__left__more {
-  margin-left: -8px!important;
+  margin-left: -8px !important;
 }
 
 .emails-header__right {

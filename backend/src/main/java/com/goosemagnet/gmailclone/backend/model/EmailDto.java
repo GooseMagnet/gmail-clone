@@ -30,5 +30,11 @@ public class EmailDto {
 
     private String body;
 
+    private boolean isRead;
+
+    private boolean isImportant;
+
+    private boolean isStar;
+
     private Instant dateSent;
 }

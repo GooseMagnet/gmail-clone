@@ -1,8 +1,8 @@
 package com.goosemagnet.gmailclone.backend.service;
 
-import com.goosemagnet.gmailclone.backend.util.exception.ResourceNotFoundException;
 import com.goosemagnet.gmailclone.backend.model.EmailDto;
 import com.goosemagnet.gmailclone.backend.persistence.EmailRepository;
+import com.goosemagnet.gmailclone.backend.util.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,5 +39,14 @@ public class EmailService {
             throw new ResourceNotFoundException("Email not found with id: [" + emailId + "]");
         }
         emailRepository.deleteById(emailId);
+    }
+
+    public void deleteEmailsBulk(List<String> emailIds) {
+        emailIds.forEach(this::deleteEmail);
+    }
+
+    public EmailDto updateEmailById(String emailId, EmailDto emailDto) {
+        if (!emailRepository.existsById(emailId)) emailDto.setId(null);
+        return emailRepository.save(emailDto);
     }
 }
